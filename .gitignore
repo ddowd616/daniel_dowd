@@ -12,6 +12,9 @@
 
 # IntelliJ Idea
 .idea
+#J-M said remove
+.DS_Store
+
 
 # Package Files #
 *.jar
