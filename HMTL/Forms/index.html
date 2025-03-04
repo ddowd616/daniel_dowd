@@ -1,0 +1,35 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Forms</title>
+</head>
+<body>
+<!--CRUD Create Read Update Delete-->
+    <form action="" method="post">
+        <label for="chunky"> First Name: </label>
+        <input type="text" id="chunky" placeholder="Please enter your first name.">
+        <br>
+        <label for="loginPassword"> Password: </label>
+        <input type="password" name="Password" id="loginPassword">
+        <br>
+<!--or-->
+        <label > Password:
+            <input type="password" name="Password" id="password">
+        </label>
+        <br>
+<!--name will eventually be how we tie it to data-->
+        <label>
+            Age:
+            <input type="number" name="Kitty" id="">
+        </label>
+        <br>
+        <label>
+            Email:
+            <input type="email" name="email" id="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </label>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+</html>
