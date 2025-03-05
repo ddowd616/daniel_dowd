@@ -1,0 +1,99 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FormLab-Contact Page</title>
+</head>
+<body>
+
+    <a href="index.html" target="_self">Home</a>
+    <a href="#">Contact</a>
+<!--internal styling-->
+    <style>
+        h1{
+            background-color: aqua;
+        }
+        #doggy{
+            color: red;
+        }
+        .banana{
+            color: yellow;
+        }
+    </style>
+    <h1 id="doggy">Form1</h1>
+    <h1 class="banana">Form2</h1>
+    <h1 class="banana">Form3</h1>
+
+    <form action="" method="get">
+        <label style="border: aqua 2px solid; color: darkgreen">
+            First Name:
+            <input type="text" name="fname" id="" placeholder="Please enter First Name..." required>
+        </label>
+        <br>
+        <label>
+            Last Name:
+            <input type="text" name="lname" id="" placeholder="Please enter Last Name..." maxlength="20">
+        </label>
+        <br>
+        <label>
+            Email:
+            <input type="text" name="email_address" id="" placeholder="Please enter Email..." required pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+        </label>
+        <br>
+        <label>
+            Phone Number:
+            <input type="tel" name="telephone_number" id="" placeholder="xxx-xxx-xxxx" pattern="^(1-)?\d{3}-\d{3}-\d{4}$" title="pattern xxx-xxx-xxxx">
+        </label>
+        <br>
+        <p>* xxx-xxx-xxxx</p>
+        <br>
+        <label>
+            Age:
+            <input type="number" name="age" id="" min="21" max= "100" placeholder="Must be atleast 21">
+        </label>
+        <br>
+        <label>
+            Password:
+            <input type="password" name="password" id="">
+        </label>
+        <label>
+            Are you Alive?
+            <br>
+            Yes<input type="radio" name="isAlive" id="" value="yes" checked>
+            No<input type="radio" name="isAlive" id="" value="no">
+            Zombie<input type="radio" name="isAlive" id="" value="zombie">
+        </label>
+        <br>
+        <label>
+            Colors:
+            <input type="checkbox" name="color1" id="" value="blue">Blue
+            <input type="checkbox" name="color2" id="" value="red">Red
+            <input type="checkbox" name="color3" id="" value="orange">Orange
+            <input type="checkbox" name="color4" id="" value="yellow">Yellow
+            <input type="checkbox" name="color5" id="" value="green">Green
+        </label>
+        <br>
+        <label>
+            Tell us more about yourself
+            <br>
+            <textarea rows="10" cols="100" maxlength="200" name="personDescription"></textarea>
+        </label>
+        <br>
+        <label>
+            State:
+            <select name="state" id="">
+                <option value="notSelected">Please Select a State</option>
+                <option value="texas">TX</option>
+                <option value="missouri">MO</option>
+                <option value="indiana">IN</option>
+            </select>
+        </label>
+        <br>
+        <button type="submit">Submit</button>
+        <input type="submit" value="Raisins">
+        <button type="reset">Reset</button>
+    </form>
+
+</body>
+</html>
