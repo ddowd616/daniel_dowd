@@ -7,14 +7,102 @@
 </head>
 <body>
 <h1>Now Hiring</h1>
-<div>
-    <p>Navigation Links</p>
-    <ul>
-        <li><a href="index.html">Landing Page</a></li>
-        <li><a href="menu.html">Menu</a></li>
-        <li><a href="now_Hiring.html">Now Hiring</a></li>
-    </ul>
-</div>
+<!--Navigation Links-->
+    <div>
+        <p>Navigation Links</p>
+        <ul>
+            <li><a href="index.html">Landing Page</a></li>
+            <li><a href="menu.html">Menu</a></li>
+            <li><a href="now_Hiring.html">Now Hiring</a></li>
+        </ul>
+    </div>
+    <div>
+        <form action="" method="get">
+            <label for="">
+                First Name:
+                <input type="text" name="fname" id="" placeholder="Please enter First Name..." required minlength="1" maxlength="20">
+            </label>
+            <br>
+            <label for="">
+                Last Name:
+                <input type="text" name="lname" id="" placeholder="Please enter Last Name..." minlength="1" maxlength="20">
+            </label>
+            <br>
+            <label for="">
+                Address 1:
+                <input type="text" name="" id="" placeholder="Enter your address" required>
+            </label>
+            <br>
+            <label for="">
+                Address 2:
+                <input type="text" name="" id="" placeholder="Enter apt #">
+            </label>
+            <br>
+            <label for="">
+                City:
+                <input type="text" name="" id="" maxlength="30">
+            </label>
+            <br>
+            <label for="">
+                State:
+                <select name="state" id="">
+                    <option value="not-selected">Please Select a State</option>
+                    <option value="texas">TX</option>
+                    <option value="missouri">MO</option>
+                    <option value="alaska">AK</option>
+                </select>
+            </label>
+            <br>
+            <label>
+                Age:
+                <input type="number" name="age" id="" min="21" max="99" required>
+            </label>
+            <br>
+            <label for="">
+                Phone Number:
+                <input type="tel" name="telephone_number" id="" placeholder="xxx-xxx-xxxx" pattern="^(1-)?\d{3}-\d{3}-\d{4}$" required>
+            </label>
+            <br>
+            <p>* xxx-xxx-xxxx</p>
+            <br>
+            <label>
+                Email:
+                <input type="text" name="email_address" id="" placeholder="Please enter Email..." pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,4}$">
+            </label>
+            <br>
+            <label>
+                Password:
+                <input type="password" name="password" id="" required pattern="^(?=.*[A-Za-z])(?=.*\d)(?=.*[@$!%*?&#])[A-Za-z\d@$!%*?&]{8,12}$">
+            </label>
+            <br>
+            <p>*must consist of 8-12 characters, with atleast one letter, one number, and one special character</p>
+            <br>
+            <label for="">
+                Single<input type="radio" name="marriageStatus" id="" value="single" checked>
+                Married<input type="radio" name="marriageStatus" id="" value="married">
+                Divorced<input type="radio" name="marriageStatus" id="" value="divorced">
+            </label>
+            <br>
+            <label>
+                Favorite Colors:
+                <input type="checkbox" name="color1" id="" value="blue">Blue
+                <input type="checkbox" name="color2" id="" value="red">Red
+                <input type="checkbox" name="color3" id="" value="orange">Orange
+                <input type="checkbox" name="color4" id="" value="yellow">Yellow
+                <input type="checkbox" name="color5" id="" value="green">Green
+            </label>
+            <br>
+            <label>
+                More Info
+                <br>
+                <textarea rows="4" cols="20" maxlength="30" name="personDescription"></textarea>
+            </label>
+            <br>
+            <button type="submit">Submit</button>
+            <br>
+            <button type="reset">Reset</button>
+        </form>
+    </div>
 
 </body>
 </html>

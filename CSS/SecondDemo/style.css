@@ -1,0 +1,10 @@
+body{
+    background-color: red;
+}
+h1:hover {
+    background-color: purple;
+}
+button:hover{
+    color:blue;
+    cursor: pointer;
+}

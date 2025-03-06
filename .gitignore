@@ -13,6 +13,7 @@
 # IntelliJ Idea
 .idea
 #J-M said remove
+*.DS_Store
 .DS_Store
 
 
