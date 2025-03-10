@@ -1,0 +1,35 @@
+body{
+    text-align: center;
+}
+.div1{
+    height: 200px;
+    width: 200px;
+    background-color: green;
+    position: relative;
+    /*top: 200px;*/
+    /*left: 100px;*/
+    margin: 0 auto;
+    text-align: right;
+}
+.div2{
+    height: 200px;
+    width: 200px;
+    background-color: red;
+}
+.container{
+    height: 300px;
+    width: 300px;
+    background-color: grey;
+    position: relative;
+    /*overflow: hidden;*/
+}
+.innerDiv{
+    height: 100px;
+    width: 100px;
+    background-color: #91ad2a;
+    position: absolute;
+    /*top: 30px;*/
+    bottom: 0;
+    right: -300px;
+    overflow: auto;
+}
