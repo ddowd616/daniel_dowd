@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question5</title>
+    <style>
+        #text-paragraph {
+            text-align: center;
+            font-size: 36em;
+        }
+    </style>
+</head>
+<body>
+
+<button id="insertButton">Click Me</button>
+<p id="text-paragraph"></p>
+
+<script>
+    const newParagraph = "I am a bunch of text and when submitted I should be centered. If not, then I might need to do some more research on how to do. :)";
+
+    document.getElementById("insertButton").onclick = function() {
+        let paragraph = document.getElementById("text-paragraph");
+        paragraph.textContent = newParagraph;
+        paragraph.style.textAlign = "center";
+        paragraph.style.fontSize = "36em";
+    };
+</script>
+
+</body>
+</html>

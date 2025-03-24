@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>question2</title>
+</head>
+<body>
+<h2>Array to Unordered List</h2>
+<ul id="item-list"></ul>
+<button id="add-item-btn">Add Item</button>
+
+<script>
+    const dogBreeds = ["English Bulldogs", "Mastiff", "Mutt"];
+    const button = document.getElementById("add-item-btn");
+    const list = document.getElementById("item-list");
+    let index = 0;
+
+    button.addEventListener("click", function() {
+        const listItem = document.createElement("li");
+        listItem.textContent = dogBreeds[index];
+        list.appendChild(listItem);
+        index = (index + 1) % dogBreeds.length;
+    });
+</script>
+</body>
+</html>

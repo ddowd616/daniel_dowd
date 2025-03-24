@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>question1</title>
+</head>
+<body>
+<h2>Age Validation Form</h2>
+<form id="ageForm">
+    <label for="age">Enter your age:</label>
+    <input type="text" id="age" name="age" required>
+    <button type="submit">Submit</button>
+    <p id="error-message" class="error-message"></p>
+</form>
+<script>
+    const form = document.getElementById("ageForm");
+    const errorMessage = document.getElementById("error-message");
+
+    form.addEventListener("submit", function(event) {
+        event.preventDefault();
+
+        const ageInput = document.getElementById("age").value.trim();
+        const age = Number(ageInput);
+
+        if (isNaN(age) || age <= 18) {
+            errorMessage.textContent = "Please enter a valid age greater than 18.";
+            errorMessage.style.display = "block";
+        } else {
+            errorMessage.style.display = "none";
+            alert("Form submitted successfully!");
+        }
+    });
+</script>
+</body>
+</html>
