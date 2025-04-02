@@ -15,6 +15,7 @@
 #J-M said remove
 *.DS_Store
 .DS_Store
+.env
 
 
 # Package Files #
