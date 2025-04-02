@@ -1,10 +1,21 @@
-import { useState } from 'react'
+//hooks -functions that hook into react and allow functionality
+import { useState, useEffect } from 'react'
 import './App.css'
 
 function App() {
 
-    const [count,setCount] = useState(7);
-    const [isSeven,setIsSeven] = useState(false)
+    const [count,setCount] = useState(0);
+    const [isSeven,setIsSeven] = useState(false);
+
+    //empty braces on deps means just run one time
+    //if you have stuff in the deps it will pay attention to when those things change
+    useEffect(() => {
+        setIsSeven(count === 7)
+    },[])
+
+    //useEffect is a hook aka function
+    //takes two arguments: cb() and list of dependencies
+    //useEffect
 
     const handleClick = () => {
         //create random number
