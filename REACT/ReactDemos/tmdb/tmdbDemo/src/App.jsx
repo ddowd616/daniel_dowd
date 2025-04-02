@@ -9,6 +9,7 @@ import MovieCard from "./components/MovieCard.jsx";
 import {useState} from "react";
 
 
+
 const App = () => {
 
     const [movies,setMovies] = useState("");
@@ -25,15 +26,16 @@ const App = () => {
                 params: {language: 'en-US', page: '1'},
             headers: {
                 accept: 'application/json',
-                    Authorization: 'Bearer eyJhbGciOiJIUzI1NiJ9.eyJhdWQiOiJhYzk1OTRjMzZmYzM1YzM0OGE3ZTNlMjgyNWY4NDdmZSIsIm5iZiI6MTc0MzQ0MDEyMy41MjcsInN1YiI6IjY3ZWFjOGZiMzAxNDhiODkyYWY5YmU4YSIsInNjb3BlcyI6WyJhcGlfcmVhZCJdLCJ2ZXJzaW9uIjoxfQ.gaAhAFrKC-z2xyyoeJNXaaEf64rKd-AhsG_eqWNjdUA'
+                    Authorization: `Bearer ${process.env.VITE_TMDB_API_TOKEN}`
             }
         };
         axios
             .request(options)
             .then(response => {
                 console.log(response.data)
-                let movieArray = response.data.results.map(movie => <MovieCard data={movie}/>)
+                let movieArray = response.data.results.map((movie,i) => <MovieCard data={movie} key={i}/>)
                 setMovies(movieArray)
+
             })
             .catch(error => {
                 console.error(error)
