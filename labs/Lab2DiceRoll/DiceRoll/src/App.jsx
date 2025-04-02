@@ -4,17 +4,17 @@ import {getRandomNumber} from "./util/helper.js";
 import Dice from "./components/Dice.jsx";
 
 const App = () => {
-    const [diceIndex,setDiceIndex] = useState(getRandomNumber());
-    const [diceIndex2,setDiceIndex2] = useState(getRandomNumber());
-    const [total,setTotal] = useState(null);
+    const [diceIndex,setDiceIndex] = useState(getRandomNumber);
+    const [diceIndex2,setDiceIndex2] = useState(getRandomNumber);
+    const [total,setTotal] = useState(diceIndex+diceIndex2+2);
 
-    useEffect(() => {
-        setDiceIndex(getRandomNumber())
-    }, []);
-
-    useEffect(() => {
-        setDiceIndex2(getRandomNumber())
-    }, []);
+    // useEffect(() => {
+    //     setDiceIndex(getRandomNumber())
+    // }, []);
+    //
+    // useEffect(() => {
+    //     setDiceIndex2(getRandomNumber())
+    // }, []);
 
     const rollDice = () => {
         const newDiceIndex =(getRandomNumber())
