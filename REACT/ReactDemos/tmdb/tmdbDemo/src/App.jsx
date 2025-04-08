@@ -7,6 +7,7 @@ import Contact from "./components/Contact.jsx";
 import axios from "axios";
 import MovieCard from "./components/MovieCard.jsx";
 import {useState} from "react";
+import SearchAppBar from "./components/AppBar.jsx";
 
 
 
@@ -44,34 +45,36 @@ const App = () => {
 
   return (
     <>
+
       <h1>App Comp</h1>
         <B_Router>
-            <div className="App">
-                <ul>
-                    <li>
-                    {/*normal we would use anchor tags*/}
-                        <Link to="/home">
-                            Home
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/about">
-                            About
-                        </Link>
-                    </li>
-                    <li>
-                        <Link to="/contact">
-                            Contact
-                        </Link>
-                    </li>
-                </ul>
-                <hr/>
-                <Routes>
-                    <Route path={"/home"} element={<Home/>}/>
-                    <Route path={"/about"} element={<About/>}/>
-                    <Route path={"/contact"} element={<Contact/>}/>
-                </Routes>
-            </div>
+            <SearchAppBar/>
+            {/*<div className="App">*/}
+                {/*<ul>*/}
+                {/*    <li>*/}
+                {/*    /!*normal we would use anchor tags*!/*/}
+                {/*        <Link to="/home">*/}
+                {/*            Home*/}
+                {/*        </Link>*/}
+                {/*    </li>*/}
+                {/*    <li>*/}
+                {/*        <Link to="/about">*/}
+                {/*            About*/}
+                {/*        </Link>*/}
+                {/*    </li>*/}
+                {/*    <li>*/}
+                {/*        <Link to="/contact">*/}
+                {/*            Contact*/}
+                {/*        </Link>*/}
+                {/*    </li>*/}
+                {/*</ul>*/}
+                {/*<hr/>*/}
+                {/*<Routes>*/}
+                {/*    <Route path={"/home"} element={<Home/>}/>*/}
+                {/*    <Route path={"/about"} element={<About/>}/>*/}
+                {/*    <Route path={"/contact"} element={<Contact/>}/>*/}
+                {/*</Routes>*/}
+            {/*</div>*/}
         </B_Router>
         <button onClick={handleClick}>Now Playing</button>
         {movies}
