@@ -39,7 +39,7 @@ const App = () => {
                 <label htmlFor="" className="age">Age</label>
                 <input
                     onChange={handleChange}
-                    type="number"
+                    type="text"
                     name="age"
                     id=""
                     value={age}/>

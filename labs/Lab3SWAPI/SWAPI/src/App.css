@@ -1,0 +1,43 @@
+.app {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  min-height: 100vh;
+  padding: 2rem;
+  color: white;
+}
+
+button {
+  margin: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+}
+
+h1 {
+  color: #ffe81f;
+  background-color: #1a1a1a;
+  margin: 10px;
+  padding: 10px;
+  border-radius: 6px;
+}
+
+body{
+  background-image: url(assets/SWAPI.webp);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+table, th, td {
+  color: #ffffff;
+  border: 1px solid;
+  background-color: #1a1a1a;
+  text-align: center;
+  padding: 5px;
+}
+
+p {
+  background-color: #1a1a1a;
+  padding: 10px;
+
+
+}
