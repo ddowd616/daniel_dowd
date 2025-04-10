@@ -4,9 +4,46 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>SWAPI</title>
+    <link href="./styles.css" rel="stylesheet">
   </head>
   <body>
+  <audio preload="auto" autoplay controls>
+    <source src="./background_assets/Star%20Wars%20Main%20Theme%20(Full).mp3">
+  </audio>
+  <section class="intro">
+    A long time ago, in a galaxy far,<br> far away....
+  </section>
+  <section class="logo">
+    <img src="./background_assets/SWAPI_logo.png" alt="SWAPI_Logo">
+  </section>
+  <div id="scroller">
+    <div id="content">
+      <p id="title">Episode X</p>
+      <p id="subtitle">Star Wars: Echoes of the Force</p>
+      <br>
+      <p>In the distant Outer Rim, Jedi Knight Jack wandered through the ancient ruins of Jedha, guided only by whispers in the Force. His mission was simple: find the remnants of a lost holocron said to contain teachings from the earliest Jedi philosophers. The planet, scarred by years of war and darkness, echoed with the memories of fallen warriors. Jack, cloaked in dusty robes and burdened by silence, followed faint tremors of light that pulsed like a heartbeat beneath the stone. Each step tested his resolve, but the Force urged him forward — something was waiting.</p>
+      <p>Beneath the temple's shattered dome, Jack found not a holocron, but a young child cloaked in shadows, trembling with fear and raw, uncontrolled power. She had been left behind, forgotten by a galaxy too busy waging war to notice. Jack knelt beside her, offering peace through presence, not words. The Force swirled between them — hesitant, curious, alive. As dawn broke over the ruins, Jack knew his mission had changed. The holocron could wait. The future of the Jedi now rested in the heart of a child who had survived the dark, and in the hands of the Jedi who chose to listen.</p>
+    </div>
+  </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
+  <script src="init.js"></script>
+  <script>
+
+    setTimeout(() => {
+      const intro = document.querySelector('.intro');
+      const logo = document.querySelector('.logo');
+      const content = document.getElementById('content'); // inside #scroller
+      const scroller = document.getElementById('scroller');
+
+      intro?.remove();
+      logo?.remove();
+      scroller?.remove();
+      content?.remove();
+      document.body.classList.add('hide-after');
+      console.log('Timeout fallback triggered.');
+    }, 60000);
+  </script>
+
   </body>
 </html>

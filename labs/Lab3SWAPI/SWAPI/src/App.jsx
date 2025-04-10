@@ -37,14 +37,34 @@ export default function App() {
         setPage(null)
 
     }
-
+    const stars = Array.from({ length: 100 }).map((_, index) => ({
+        id: index,
+        left: `${Math.random() * 100}vw`,
+        top: `${Math.random() * 100}vh`,
+        delay: `${Math.random()}s`,
+        duration: `${Math.random() + 0.5}s`
+    }));
     return (
         <div style={STYLE}>
+            <div className="lightspeed">
+                {stars.map(star => (
+                    <div
+                        key={star.id}
+                        className="star"
+                        style={{
+                            left: star.left,
+                            top: star.top,
+                            animationDelay: star.delay,
+                            animationDuration: star.duration
+                        }}
+                    />
+                ))}
+            </div>
             <h1>SWAPI</h1>
             <button onClick={loadTable}>Submit</button>
             <button onClick={resetTable}>Reset</button>
             {showTable && <Table people={data}/> }
-            {page && <p>Page: {page}</p>}
+            {page && <p id="page">Page: {page}</p>}
         </div>
     )
 }
