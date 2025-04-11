@@ -7,7 +7,8 @@
     <link href="./styles.css" rel="stylesheet">
   </head>
   <body>
-  <audio preload="auto" autoplay controls>
+  <button id="play-audio">Play Star Wars Theme</button>
+  <audio id="audio" preload="auto" autoplay controls>
     <source src="./background_assets/Star%20Wars%20Main%20Theme%20(Full).mp3">
   </audio>
   <section class="intro">
@@ -21,15 +22,26 @@
       <p id="title">Episode X</p>
       <p id="subtitle">Star Wars: Echoes of the Force</p>
       <br>
-      <p>In the distant Outer Rim, Jedi Knight Jack wandered through the ancient ruins of Jedha, guided only by whispers in the Force. His mission was simple: find the remnants of a lost holocron said to contain teachings from the earliest Jedi philosophers. The planet, scarred by years of war and darkness, echoed with the memories of fallen warriors. Jack, cloaked in dusty robes and burdened by silence, followed faint tremors of light that pulsed like a heartbeat beneath the stone. Each step tested his resolve, but the Force urged him forward — something was waiting.</p>
-      <p>Beneath the temple's shattered dome, Jack found not a holocron, but a young child cloaked in shadows, trembling with fear and raw, uncontrolled power. She had been left behind, forgotten by a galaxy too busy waging war to notice. Jack knelt beside her, offering peace through presence, not words. The Force swirled between them — hesitant, curious, alive. As dawn broke over the ruins, Jack knew his mission had changed. The holocron could wait. The future of the Jedi now rested in the heart of a child who had survived the dark, and in the hands of the Jedi who chose to listen.</p>
+      <p>It is a time of questionable peace. Jedi Knight Jack Starwhisker, wielder of the triple-bladed glowstick saber, has been banished from the Jedi Order for excessive snack breaks and insisting that “the Force feels strongest after tacos.” Now exiled to the moon of Flavortown-9, Jack trains under the mysterious and possibly imaginary Master Broccolini, who communicates only in interpretive dance.</p>
+      <p>Meanwhile, a dark plot brews. The sinister Sith Lord Croutonus, Jack’s former roommate and part-time karaoke rival, has acquired the mythical Artifact of Awkward Silence — capable of rendering any negotiation unbearably cringey. With his trusty space llama Cheesesteak and a broken droid that only speaks in outdated memes, Jack must rise once more to stop the galaxy from plunging into galactic discomfort... one awkward moment at a time.</p>
     </div>
   </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   <script src="init.js"></script>
   <script>
+    document.addEventListener("DOMContentLoaded", function () {
+      const audio = document.getElementById('audio');
+      const btn = document.getElementById('play-audio');
 
+      btn.addEventListener('click', () => {
+        audio.play().then(() => {
+          console.log("Playback started!");
+        }).catch(err => {
+          console.error("Playback failed:", err);
+        });
+      });
+    });
     setTimeout(() => {
       const intro = document.querySelector('.intro');
       const logo = document.querySelector('.logo');
