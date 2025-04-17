@@ -9,6 +9,6 @@ exports.bucketlist = [
     },
     {   id:3,
         description:"learn stuff3",
-        isComplete:false
+        isComplete:true
     },
 ]

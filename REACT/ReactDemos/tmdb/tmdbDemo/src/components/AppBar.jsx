@@ -56,7 +56,7 @@ export default function SearchAppBar() {
     const navigate = useNavigate();
     return (
         <Box sx={{ flexGrow: 1 }}>
-            <AppBar position="static">
+            <AppBar position="fixed" sx={{ top: 0, left: 0, right: 0 }}>
                 <Toolbar>
                     <IconButton
                         size="large"

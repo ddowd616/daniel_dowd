@@ -8,6 +8,9 @@ const app = express()
 //this will help with routing and params
 const logger = require("morgan");
 
+const cors = require("cors")
+app.use(cors())
+
 const{bucketlist} = require("./mockData")
 
 app.use(logger("dev"))
@@ -51,6 +54,45 @@ app.post("/api/bucket",(req,res)=>{
     bucketlist.push(newData)
     let receipt = newData;
     res.json(receipt)
+})
+
+//DELETE route
+app.delete("/api/bucket/:id",(req, res) => {
+    let requestedId = Number(req.params.id);
+    if(isNaN(requestedId)){
+        res.status(777).json({message:"Not a number!!!"})
+    }
+    //findIndex()
+    let bucketIndex = bucketlist.findIndex((element) => {
+        return element.id === requestedId})
+    if(bucketIndex !== -1){
+        let removedObj= bucketlist.splice(bucketIndex,1);
+        let receipt = removedObj;
+        res.json(receipt);
+    }else {
+        res.status(404).json({error:"Unable to find id"})
+    }
+})
+
+app.put("/api/bucket/:id",(req, res) => {
+    let requestedId = Number(req.params.id);
+    if(isNaN(requestedId)){
+        res.status(404).json({message:"Not a number!!!"})
+    }
+    if(!requestedId){
+        res.status(404).json({message:"You didnt provide an ID"})
+    }
+
+    let item = bucketlist.find((el) => {return el.id === requestedId})
+    //if item exists return the receipt with update
+    if(item){
+        item.isComplete = !item.isComplete;
+        let receipt = item
+        res.json(receipt)
+    }else {
+        res.status(404).json({message:"Item does not exist"})
+    }
+
 })
 //LISTENER
 app.listen(port, () => {
