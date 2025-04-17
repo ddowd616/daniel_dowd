@@ -52,7 +52,7 @@ function NavBar() {
                     TMDB (Landing Page)
                 </Typography>
                 <Typography variant="h6" noWrap sx={{ flexGrow: 1, cursor: 'pointer' }} onClick={() => navigate('/results')}>
-                    Results
+                    Now Playing
                 </Typography>
                 <Search>
                     <SearchIconWrapper>
